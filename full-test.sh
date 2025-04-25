@@ -49,4 +49,7 @@ else
     echo "Missing conf/assignment.txt, no assignment to run"
     exit 1
 fi
+
+echo "assignment4-2" > /tmp/assignment4-result.txt
+
 exit ${unit_test_rc}
