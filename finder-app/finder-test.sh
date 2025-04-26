@@ -76,3 +76,10 @@ else
 	echo "failed: expected  ${MATCHSTR} in ${OUTPUTSTRING} but instead found"
 	exit 1
 fi
+
+touch /tmp/assignment4-result.txt
+
+for i in $( seq 1 $NUMFILES)
+do
+	echo $i > /tmp/assignment4-result.txt
+done
