@@ -4,10 +4,10 @@ cc = gcc
 
 ifneq ($(GCC), )
 	cc = $(GCC)
-else ifeq ($(CROSS_COMPILE), aarch64-none-linux-gnu-)
-	cc = aarch64-none-linux-gnu-gcc
-else
+else ifneq ($(CROSS_COMPILE), )
 	cc = $(CROSS_COMPILE)gcc
+else
+	cc = aarch64-none-linux-gnu-gcc
 endif
 
 BIN = aesdsocket
